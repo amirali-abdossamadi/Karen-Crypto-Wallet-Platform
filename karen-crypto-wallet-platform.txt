@@ -1,0 +1,106 @@
+karen-crypto-wallet-platform/
+├── client/                          # Frontend (React + Vue + SSR)
+│   ├── public/                      # Static assets for public access
+│   │   ├── index.html               # Main HTML template with SEO metadata
+│   │   ├── favicon.ico              # Site favicon
+│   │   ├── robots.txt              # SEO crawler instructions
+│   │   ├── sitemap.xml             # Static sitemap for search engines
+│   │   └── assets/                  # Optimized static assets
+│   │       ├── images/              # Pre-compressed PNGs/JPEGs/WebP
+│   │       ├── fonts/               # Custom fonts (e.g., Inter, Roboto)
+│   │       └── manifest.json        # PWA manifest for progressive web app
+│   ├── src/                        # Source code for frontend
+│   │   ├── components/              # Reusable React components
+│   │   │   ├── Header.jsx           # Navigation bar with SSR support
+│   │   │   ├── Footer.jsx           # Footer with dynamic links
+│   │   │   ├── WalletCard.jsx       # Wallet overview component
+│   │   │   └── PaymentModal.vue     # Vue.js modal for payment initiation
+│   │   ├── pages/                   # Page-level components (SSR-enabled)
+│   │   │   ├── Home.jsx             # Landing page with SEO metadata
+│   │   │   ├── Dashboard.jsx        # User dashboard with real-time data
+│   │   │   ├── Pricing.jsx          # Subscription plans page
+│   │   │   └── Docs.jsx            # Documentation page
+│   │   ├── styles/                  # Tailwind CSS and custom styles
+│   │   │   ├── tailwind.css         # Tailwind base configuration
+│   │   │   └── global.css           # Global styles (e.g., resets, typography)
+│   │   ├── utils/                   # Utility functions
+│   │   │   ├── api.js               # API fetch wrappers
+│   │   │   └── seo.js              # Dynamic SEO metadata generator
+│   │   ├── App.jsx                  # Root React component
+│   │   └── main.jsx                 # Entry point for React app
+│   ├── next.config.js               # Next.js config for SSR and optimization
+│   ├── vite.config.js               # Vite config for dev speed
+│   ├── tailwind.config.js           # Tailwind customization
+│   └── package.json                 # Frontend dependencies (React, Vue, etc.)
+│
+├── server/                          # Main backend (Node.js + Express.js)
+│   ├── src/                        # Backend source code
+│   │   ├── controllers/             # Request handlers
+│   │   │   ├── authController.js    # User authentication logic
+│   │   │   ├── walletController.js  # Wallet management endpoints
+│   │   │   └── paymentController.js # Payment processing endpoints
+│   │   ├── routes/                  # API routes
+│   │   │   ├── auth.js              # /api/auth routes
+│   │   │   ├── wallet.js            # /api/wallet routes
+│   │   │   └── payment.js           # /api/payment routes
+│   │   ├── middleware/              # Custom middleware
+│   │   │   ├── auth.js              # JWT authentication
+│   │   │   └── rateLimit.js         # API rate limiting
+│   │   ├── services/                # Business logic services
+│   │   │   ├── blockchainService.js # Blockchain interaction wrapper
+│   │   │   └── cacheService.js      # Redis caching logic
+│   │   ├── config/                  # Configuration files
+│   │   │   ├── db.js                # PostgreSQL connection
+│   │   │   └── redis.js             # Redis connection
+│   │   ├── app.js                   # Express app setup
+│   │   └── server.js                # Main server entry point
+│   ├── .env                         # Environment variables (e.g., API keys)
+│   └── package.json                 # Backend dependencies (Express, etc.)
+│
+├── django-app/                      # Django backend for core logic
+│   ├── karen_wallet/                # Main Django app
+│   │   ├── migrations/              # Database migrations
+│   │   ├── templates/               # SSR templates
+│   │   │   ├── base.html            # Base template with SEO tags
+│   │   │   └── dashboard.html       # Dashboard template
+│   │   ├── models/                  # Database models
+│   │   │   ├── user.py              # User model
+│   │   │   └── transaction.py       # Transaction model
+│   │   ├── views/                   # Django views
+│   │   │   ├── auth.py              # Authentication views
+│   │   │   └── dashboard.py         # Dashboard views
+│   │   ├── urls.py                  # Django URL routing
+│   │   └── admin.py                 # Admin panel configuration
+│   ├── static/                      # Django static files
+│   │   ├── css/                     # Compiled CSS from Tailwind
+│   │   └── js/                      # Compiled JS bundles
+│   ├── manage.py                    # Django management script
+│   ├── settings.py                  # Django settings (DB, caching, etc.)
+│   └── requirements.txt             # Python dependencies (Django, etc.)
+│
+├── flask-microservice/              # Flask microservice for blockchain
+│   ├── src/                        # Flask source code
+│   │   ├── routes/                  # Microservice routes
+│   │   │   ├── blockchain.py        # Blockchain interaction endpoints
+│   │   │   └── health.py            # Health check endpoint
+│   │   ├── services/                # Microservice logic
+│   │   │   └── chainConnector.py    # Blockchain API connector
+│   │   ├── app.py                   # Flask app setup
+│   │   └── config.py                # Configuration settings
+│   ├── .env                         # Environment variables
+│   └── requirements.txt             # Flask dependencies
+│
+├── docs/                            # Documentation
+│   ├── api.md                       # API endpoint documentation
+│   ├── setup.md                     # Local setup instructions
+│   └── architecture.md              # System architecture overview
+│
+├── scripts/                         # Utility scripts
+│   ├── build.sh                     # Build script for production
+│   ├── dev.sh                       # Start dev environment
+│   └── test.sh                      # Run tests
+│
+├── .gitignore                       # Git ignore file
+├── docker-compose.yml               # Docker setup for local services
+├── README.md                        # Project overview and setup guide
+└── package.json                     # Root dependencies (monorepo tools)
