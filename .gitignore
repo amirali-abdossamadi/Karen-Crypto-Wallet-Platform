@@ -1,0 +1,32 @@
+# برای همه بخش‌های Node.js (client, server, و غیره)
+**/node_modules/
+*.log
+npm-debug.log*
+package-lock.json
+
+# برای Python (django-app, flask-microservice)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+*.env
+*.egg-info/
+dist/
+build/
+
+# فایل‌های موقت و خروجی
+*.bak
+*.swp
+*.tmp
+*.cache
+
+# دیتابیس و کش (اگه بعداً اضافه کردی)
+pgdata/
+redisdata/
+
+# خروجی بیلد
+**/dist/
+**/build/
+django-app/staticfiles/
